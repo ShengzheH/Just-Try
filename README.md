@@ -7,4 +7,4 @@
 ## URL:https://shengzheh.github.io/Just-Try/
 ---
 
-> notice:Because the private library deployment requires upgrade, we changed the library to public.
+> notice:Because the private repository deployment requires to upgrade, we changed the repository to public.
