@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            z-index:999999;
+            border-collapse: collapse;
+        }
+        th {
+         background-color: #4CAF50;
+         /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+         color: white;
+}
+        table th,tr,td{
+            width:100px;
+            text-align: center;
+        }
+        table input{
+            border:none;
+            outline: none;
+            width: 100%;
+        }
+        .inputClass{
+            width:80px;
+            height:100%
+        }
+
+    </style>
+</head>
+<body>
+    <div style="position: relative;margin-top: 200px;text-align:center">
+        <h2 style="margin-bottom: 50px;">Report  Card</h2>
+        <div> The total GPA is 3.45</div>
+        <div >
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Credit</th>
+                    <th>Grade</th>
+                    <th>GPA</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    // 数组
+    let data = [
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Military Skill',
+            credit:2,
+           grade:93,
+            total:4.3
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Psychological Education for College Students',
+            credit:2,
+           grade:79,
+            total:2.9
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Career Planning',
+            credit:1,
+           grade:98,
+            total:4.8
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'College Foreign Languages1',
+            credit:2,
+           grade:90,
+            total:4
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'College Foreign Languages 1',
+            credit:2,
+           grade:84,
+            total:3.4
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Outline of Modern and Contemporary Chinese History',
+            credit:3,
+           grade:94,
+            total:4.4
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Current Situation and Policy 1',
+            credit:0.3,
+           grade:85,
+            total:3.5
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'College Physical Education 1',
+            credit:1,
+           grade:96,
+            total:4.6
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Introduction to Computer Science',
+            credit:3,
+           grade:82,
+            total:3.2
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Multimedia Technology Practice',
+            credit:1.5,
+           grade:89,
+            total:3.9
+        },
+        {
+            id:649529448,
+            name:'Shengzhe Huang',
+            course:'Advanced MathematicsI（1）',
+            credit:5,
+           grade:69,
+            total:1.9
+        },
+    ]
+
+    window.onload = function(){
+        initdata()
+    }
+
+    function initdata(){
+        let tbodyinner = document.getElementsByTagName("tbody")[0]
+        let html = ''
+        for(let i=0;i<data.length;i++){
+            html+=`
+            <tr>
+                <td>${data[i].id}</td>
+                <td>${data[i].name}</td>
+                <td name="grade" class="course">${data[i].course}</td>
+                <td name="grade" class="credit">${data[i].credit}</td>
+                <td name="grade" class="grade">${data[i].grade}</td>
+                <td name="grade" calss="total">${data[i].total}</td>
+            </tr>
+            `
+        }
+        // tbody.innerHTML="..."往tbody中添加内容
+        tbodyinner.innerHTML = html
+        getNode()
+    }
+
+</script>
+</html>
