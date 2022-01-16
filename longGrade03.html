@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            z-index:999999;
+            border-collapse: collapse;
+        }
+        th {
+         background-color: #4CAF50;
+         /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+         color: white;
+}
+        table th,tr,td{
+            width:100px;
+            text-align: center;
+        }
+        table input{
+            border:none;
+            outline: none;
+            width: 100%;
+        }
+        .inputClass{
+            width:80px;
+            height:100%
+        }
+
+    </style>
+</head>
+<body>
+    <div style="position: relative;margin-top: 200px;text-align:center">
+        <h2 style="margin-bottom: 50px;">Report  Card</h2>
+        <div> The total GPA is 3.54</div>
+        <div >
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Credit</th>
+                    <th>Grade</th>
+                    <th>GPA</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    let data = [
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Folk customs and culture of Chinese Ethnic Minorities',
+            credit:2,
+           grade:93,
+            total:4.3
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Information system and database technology',
+            credit:1,
+           grade:68.39,
+            total:1.84
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Approaching the great poet',
+            credit:1,
+           grade:85.77,
+            total:3.58
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:' Operating System',
+            credit:4,
+           grade:70,
+            total:2
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Web programming',
+            credit:3,
+           grade:78,
+            total:2.8
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'College Foreign Languages 3',
+            credit:2,
+           grade:84,
+            total:3.4
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'A Brief Introduction to Basic Principles of Marxism',
+            credit:3,
+           grade:85,
+            total:3.5
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Introduction to the Chinese nation community',
+            credit:2,
+           grade:97,
+            total:4.7
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Current Situation and Policy 3',
+            credit:0.3,
+           grade:89,
+            total:3.9
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'College Physical Education 3',
+            credit:1,
+           grade:83,
+            total:3.3
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Data Structure',
+            credit:3,
+           grade:93,
+            total:4.4
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Discrete Mathematics',
+            credit:3,
+           grade:88,
+            total:3.8
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Digital Logic and Digital Circuit',
+            credit:3.5,
+           grade:86,
+            total:3.6
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Data Structure Experiment',
+            credit:1,
+           grade:81,
+            total:3.1
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Object Oriented Programming',
+            credit:3,
+           grade:97,
+            total:3.7
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Programming Methodology',
+            credit:3,
+           grade:87,
+            total:3.7
+        },
+        {
+            id:649529444,
+            name:'Haolong Huai',
+            course:'Probability Theory and Mathematical StatisticsⅠ',
+            credit:3,
+           grade:96,
+            total:4.6
+        },
+    ]
+
+    window.onload = function(){
+        initdata()
+    }
+
+    function initdata(){
+        let tbodyinner = document.getElementsByTagName("tbody")[0]
+        let html = ''
+        for(let i=0;i<data.length;i++){
+            html+=`
+            <tr>
+                <td>${data[i].id}</td>
+                <td>${data[i].name}</td>
+                <td name="grade" class="course">${data[i].course}</td>
+                <td name="grade" class="credit">${data[i].credit}</td>
+                <td name="grade" class="grade">${data[i].grade}</td>
+                <td name="grade" calss="total">${data[i].total}</td>
+            </tr>
+            `
+        }
+        tbodyinner.innerHTML = html
+        getNode()
+    }
+
+</script>
+</html>
